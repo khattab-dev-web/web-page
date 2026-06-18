@@ -1,61 +1,156 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-      --primaryColor: #3A3845;
+
+html {
+    --primaryColor: #3A3845;
+    --font-family: 'Inter';
 }
+
 /* start header */
-.menu{
+.menu {
     display: none;
 }
+
 ul {
     list-style-type: none;
 }
-.container{
-    width: 80%;
+
+.container {
+    width: 95%;
     margin: auto;
 }
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
 }
-.list a{
+
+.list a {
     text-decoration: none;
     color: var(--primaryColor);
 }
-.list ul{
+
+.list ul {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
+
 .icons ul {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
-.header .row{
+
+.header .row {
     justify-content: space-between;
-       align-items: center;
+    align-items: center;
 }
-.header{
+
+.header {
     padding: 21.84px 0;
 }
+
 @media screen and (min-width:0) and (max-width:430px) {
-.menu{
-    display: block;
-}
-.list {
-    display: none;
-}
-.none{
-    display: none;
-}   
-}
-@media screen and (min-width:0) and (max-width:797px){
-    .list a{
+    .menu {
+        display: block;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .none {
         display: none;
     }
 }
+
+@media screen and (min-width:0) and (max-width:797px) {
+    .list a {
+        display: none;
+    }
+}
+
 /* end header */
+
+/* start hero */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.moon {
+    background-color: #826F66;
+    width: 420px;
+    position: absolute;
+    top: 0;
+    bottom: 4px;
+    left: 165px;
+    right: 855px;
+}
+
+.moon img {
+    width: 85.43px;
+    margin: 161.38px 167.28px 42px 167.28px;
+}
+
+.subheading {
+    font-family: var(--font-family);
+    font-width: 270px;
+    font-weight: 400;
+    color: #FFFDFB;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.moon h2 {
+    font-width: 270px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFDFB;
+    text-align: center;
+}
+
+.moon button {
+    color: #826F66;
+    font-family: var(--font-family);
+    font-style: Bold;
+    font-size: 16px;
+    width: 240px;
+    height: 40px;
+    margin: 42px 100px 161.38px 100px;
+}
+
+@media screen and (min-width:0) and (max-width:430px) {
+    .moon {
+        position: static;
+        width: 100%;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .moon img {
+        margin: 0 0 20px 0;
+        width: 90px;
+    }
+
+    .moon button {
+        margin: 20px 0 0 0;
+    }
+
+    .hero .container {
+        width: 100%;
+    }
+}
+
+/* end hero */
